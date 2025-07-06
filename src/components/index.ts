@@ -1,3 +1,4 @@
 export * from "./pdf";
 export * from "./preview";
-export * from "./FileTypeIcon";
+
+export { default as FileTypeIcon } from "./FileTypeIcon";

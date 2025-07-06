@@ -4,7 +4,7 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
-  Grid2 as Grid,
+  Grid,
   LinearProgress,
   Stack,
   Tooltip,

@@ -11,20 +11,41 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      formats: ["es", "cjs"],
+      name: "DocboxUI",
+      formats: ["es", "cjs"], // generate esm + cjs for flexibility
+      fileName: (format) => `index.${format}.js`,
     },
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {
-      external: [
-        "react",
-        "react-dom",
-        "@mui/material",
-        "@mui/system",
-        "@emotion/react",
-        "@emotion/styled",
-        "@emotion/cache",
-      ],
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: "src",
+        dir: "dist",
+        entryFileNames: "[name].[format].js",
+        chunkFileNames: "[name].[format].js",
+        exports: "named",
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "react/jsx-runtime": "react/jsx-runtime",
+          "@mui/material": "MaterialUI",
+          "@emotion/react": "emotionReact",
+          "@emotion/styled": "emotionStyled",
+        },
+      },
+      external: (id) => {
+        return [
+          "react",
+          "react-dom",
+          "react/jsx-runtime",
+          "@emotion/react",
+          "@emotion/styled",
+          "@emotion/cache",
+          "@mui/material",
+          "@mui/system",
+        ].some((pkg) => id === pkg || id.startsWith(pkg + "/"));
+      },
     },
   },
   plugins: [react()],
