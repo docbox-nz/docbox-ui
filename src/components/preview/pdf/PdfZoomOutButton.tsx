@@ -1,6 +1,7 @@
 import { useViewport } from "@jacobtread/pdfreader";
 import Button from "@mui/material/Button";
-import Iconify from "../../iconify/iconify";
+import ZoomOut from "~icons/lucide/zoom-out";
+import { Box } from "@mui/material";
 
 export default function PdfZoomOutButton() {
   const { setZoom } = useViewport();
@@ -11,7 +12,7 @@ export default function PdfZoomOutButton() {
         setZoom((zoom) => Number((zoom - 0.1).toFixed(1)));
       }}
     >
-      <Iconify icon="lucide:zoom-out" />
+      <Box component={ZoomOut} width={20} height={20} />
     </Button>
   );
 }

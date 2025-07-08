@@ -10,6 +10,10 @@ import PdfZoomInButton from "./PdfZoomInButton";
 import PdfZoomOutButton from "./PdfZoomOutButton";
 import { useResponsiveDown } from "../../../hooks/use-responsive";
 import Iconify from "../../iconify/iconify";
+import ChevronLeft from "~icons/lucide/chevron-left";
+import { Box } from "@mui/material";
+import Download from "~icons/lucide/download";
+import Info from "~icons/lucide/info";
 
 type Props = {
   /** Function to close the dialog */
@@ -51,7 +55,7 @@ export default function PdfPreviewDialogHeader({
             onClick={onClose}
             sx={{ minWidth: 0, flexShrink: 0 }}
           >
-            <Iconify icon="eva:arrow-ios-back-fill" />
+            <Box component={ChevronLeft} width={20} height={20} />
           </Button>
 
           {fileName && (
@@ -101,11 +105,7 @@ export default function PdfPreviewDialogHeader({
 
                 {generated && (
                   <Tooltip title="This preview was generated from another file format, it may differ from the actual file">
-                    <Iconify
-                      icon="eva:info-fill"
-                      width={24}
-                      sx={{ color: "info.main" }}
-                    />
+                    <Box component={Info} width={24} color="info.main" />
                   </Tooltip>
                 )}
               </Stack>
@@ -139,7 +139,7 @@ export default function PdfPreviewDialogHeader({
                     sx={{ minWidth: 0 }}
                     download="test.jpg"
                   >
-                    <Iconify icon="lucide:download" />
+                    <Box component={Download} width={20} height={20} />
                   </Button>
                 )}
 

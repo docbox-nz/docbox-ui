@@ -1,6 +1,7 @@
 import { useViewport } from "@jacobtread/pdfreader";
 import Button from "@mui/material/Button";
-import Iconify from "../../iconify/iconify";
+import RotateCw from "~icons/lucide/rotate-cw";
+import { Box } from "@mui/material";
 
 export default function PdfRotateClockwiseButton() {
   const { setRotation } = useViewport();
@@ -12,7 +13,7 @@ export default function PdfRotateClockwiseButton() {
       }}
       sx={{ minWidth: 0 }}
     >
-      <Iconify icon="lucide:rotate-cw" />
+      <Box component={RotateCw} width={20} height={20} />
     </Button>
   );
 }
