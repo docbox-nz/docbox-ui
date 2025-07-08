@@ -6,6 +6,7 @@ import DialogContent, {
   type DialogContentProps,
 } from "@mui/material/DialogContent";
 import LinearProgress from "@mui/material/LinearProgress";
+import { Paper } from "@mui/material";
 
 type Props = {
   /** Whether the file is ready */
@@ -37,6 +38,7 @@ export default function PdfPreviewDialogContent({
       }}
     >
       <Box
+        component={Paper}
         sx={{
           width: "100%",
           height: "100%",
