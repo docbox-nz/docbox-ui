@@ -1,2 +1,2 @@
-export { default as DocboxPdfPreviewDialog } from "./DocboxPdfPreviewDialog";
+export * from "./pdf";
 export * from "./preview";
