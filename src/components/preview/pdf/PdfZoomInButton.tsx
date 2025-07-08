@@ -1,5 +1,5 @@
 import { useViewport } from "@jacobtread/pdfreader";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Iconify from "../../iconify/iconify";
 
 export default function PdfZoomInButton() {

@@ -12,7 +12,7 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts",
       name: "DocboxUI",
-      formats: ["es", "cjs"], // generate esm + cjs for flexibility
+      formats: ["es", "cjs"],
       fileName: (format) => `index.${format}.js`,
     },
     emptyOutDir: true,
@@ -25,14 +25,6 @@ export default defineConfig({
         entryFileNames: "[name].[format].js",
         chunkFileNames: "[name].[format].js",
         exports: "named",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "react/jsx-runtime": "react/jsx-runtime",
-          "@mui/material": "MaterialUI",
-          "@emotion/react": "emotionReact",
-          "@emotion/styled": "emotionStyled",
-        },
       },
       external: (id) => {
         return [

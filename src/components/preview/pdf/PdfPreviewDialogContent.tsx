@@ -1,22 +1,11 @@
-import {
-  Box,
-  Button,
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  Grid,
-  LinearProgress,
-  Stack,
-  Tooltip,
-  Typography,
-  type DialogContentProps,
-  type DialogTitleProps,
-} from "@mui/material";
-import { DocboxPdfViewerContent, DocboxPdfViewerProvider } from "../../pdf";
+import { DocboxPdfViewerContent } from "../../pdf";
 import { useResponsiveDown } from "../../../hooks/use-responsive";
-import { useViewport } from "@jacobtread/pdfreader";
-import Iconify from "../../iconify/iconify";
-import DocboxPdfPreviewDialogHeader from "./PdfPreviewDialogHeader";
+
+import Box from "@mui/material/Box";
+import DialogContent, {
+  type DialogContentProps,
+} from "@mui/material/DialogContent";
+import LinearProgress from "@mui/material/LinearProgress";
 
 type Props = {
   /** Whether the file is ready */

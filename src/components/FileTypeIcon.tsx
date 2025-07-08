@@ -1,5 +1,5 @@
 import { FileType } from "../types/file-type";
-import { Box, type BoxProps } from "@mui/material";
+import Box, { type BoxProps } from "@mui/material/Box";
 import { FILE_TYPE_ICON_MAPPING } from "../utils/file-type";
 
 export type FileTypeIconProps = {

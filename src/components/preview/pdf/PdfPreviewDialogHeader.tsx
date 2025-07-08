@@ -1,12 +1,10 @@
-import {
-  Button,
-  DialogTitle,
-  Grid,
-  Stack,
-  Tooltip,
-  Typography,
-  type DialogTitleProps,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import DialogTitle, { type DialogTitleProps } from "@mui/material/DialogTitle";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Tooltip from "@mui/material/Tooltip";
+import Typography from "@mui/material/Typography";
+
 import PdfRotateClockwiseButton from "./PdfRotateClockwiseButton";
 import PdfZoomInButton from "./PdfZoomInButton";
 import PdfZoomOutButton from "./PdfZoomOutButton";

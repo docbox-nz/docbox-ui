@@ -1,8 +1,7 @@
-import {
-  Dialog,
-  type DialogContentProps,
-  type DialogTitleProps,
-} from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import type { DialogContentProps } from "@mui/material/DialogContent";
+import type { DialogTitleProps } from "@mui/material/DialogTitle";
+
 import { DocboxPdfViewerProvider } from "../../pdf";
 import PdfPreviewDialogHeader from "./PdfPreviewDialogHeader";
 import PdfPreviewDialogContent from "./PdfPreviewDialogContent";
