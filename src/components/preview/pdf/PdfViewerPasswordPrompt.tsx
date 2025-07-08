@@ -28,7 +28,7 @@ type Props = {
   incorrect?: boolean;
 };
 
-export default function DocboxPdfViewerPasswordPrompt({
+export default function PdfViewerPasswordPrompt({
   onClose,
   onSubmit,
   incorrect,

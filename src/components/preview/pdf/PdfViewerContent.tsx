@@ -19,7 +19,7 @@ type Props = {
   showThumbnails?: boolean;
 };
 
-export default function DocboxPdfViewerContent({ showThumbnails }: Props) {
+export default function PdfViewerContent({ showThumbnails }: Props) {
   return (
     <Box data-pdf-layout className={styles.layout}>
       {showThumbnails && (

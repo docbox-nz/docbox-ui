@@ -1,12 +1,11 @@
-import { DocboxPdfViewerContent } from "../../pdf";
 import { useResponsiveDown } from "../../../hooks/use-responsive";
-
 import Box from "@mui/material/Box";
 import DialogContent, {
   type DialogContentProps,
 } from "@mui/material/DialogContent";
 import LinearProgress from "@mui/material/LinearProgress";
-import { Paper } from "@mui/material";
+import Paper from "@mui/material/Paper";
+import PdfViewerContent from "./PdfViewerContent";
 
 type Props = {
   /** Whether the file is ready */
@@ -65,7 +64,7 @@ export default function PdfPreviewDialogContent({
             />
           </Box>
         )}
-        {ready && <DocboxPdfViewerContent showThumbnails={!isMobile} />}
+        {ready && <PdfViewerContent showThumbnails={!isMobile} />}
       </Box>
     </DialogContent>
   );

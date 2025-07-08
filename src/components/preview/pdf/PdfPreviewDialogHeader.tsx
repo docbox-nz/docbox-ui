@@ -4,12 +4,10 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
-
 import PdfRotateClockwiseButton from "./PdfRotateClockwiseButton";
 import PdfZoomInButton from "./PdfZoomInButton";
 import PdfZoomOutButton from "./PdfZoomOutButton";
 import { useResponsiveDown } from "../../../hooks/use-responsive";
-import Iconify from "../../iconify/iconify";
 import ChevronLeft from "~icons/lucide/chevron-left";
 import { Box } from "@mui/material";
 import Download from "~icons/lucide/download";

@@ -2,7 +2,7 @@ import Dialog from "@mui/material/Dialog";
 import type { DialogContentProps } from "@mui/material/DialogContent";
 import type { DialogTitleProps } from "@mui/material/DialogTitle";
 
-import { DocboxPdfViewerProvider } from "../../pdf";
+import PdfViewerProvider from "./PdfViewerProvider";
 import PdfPreviewDialogHeader from "./PdfPreviewDialogHeader";
 import PdfPreviewDialogContent from "./PdfPreviewDialogContent";
 
@@ -41,7 +41,7 @@ export default function PdfPreviewDialog({
   return (
     <Dialog open={open} onClose={onClose} fullWidth fullScreen maxWidth="xl">
       {open && (
-        <DocboxPdfViewerProvider
+        <PdfViewerProvider
           src={previewURL}
           documentInitParams={{ withCredentials: true }}
           onClose={onClose}
@@ -65,7 +65,7 @@ export default function PdfPreviewDialog({
               />
             </>
           )}
-        </DocboxPdfViewerProvider>
+        </PdfViewerProvider>
       )}
     </Dialog>
   );

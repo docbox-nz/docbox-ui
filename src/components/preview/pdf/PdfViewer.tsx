@@ -1,7 +1,7 @@
 import type { DocumentInitParameters } from "pdfjs-dist/types/src/display/api";
 
-import DocboxPdfViewerProvider from "./DocboxPdfViewerProvider";
-import DocboxPdfViewerContent from "./DocboxPdfViewerContent";
+import PdfViewerProvider from "./PdfViewerProvider";
+import PdfViewerContent from "./PdfViewerContent";
 
 type Props = {
   src: string;
@@ -9,13 +9,9 @@ type Props = {
   onClose: VoidFunction;
 };
 
-export default function DocboxPdfViewer({
-  src,
-  documentInitParams,
-  onClose,
-}: Props) {
+export default function PdfViewer({ src, documentInitParams, onClose }: Props) {
   return (
-    <DocboxPdfViewerProvider
+    <PdfViewerProvider
       src={src}
       documentInitParams={documentInitParams}
       onClose={onClose}
@@ -23,9 +19,9 @@ export default function DocboxPdfViewer({
       {(_error, ready) => (
         <>
           {!ready && "Loading... "}
-          {ready && <DocboxPdfViewerContent showThumbnails />}
+          {ready && <PdfViewerContent showThumbnails />}
         </>
       )}
-    </DocboxPdfViewerProvider>
+    </PdfViewerProvider>
   );
 }

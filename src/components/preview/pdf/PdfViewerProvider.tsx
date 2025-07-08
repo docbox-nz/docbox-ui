@@ -2,7 +2,7 @@ import type { DocumentInitParameters } from "pdfjs-dist/types/src/display/api";
 import { useMemo, useState } from "react";
 
 import { Root } from "@jacobtread/pdfreader";
-import DocboxPdfViewerPasswordPrompt from "./DocboxPdfViewerPasswordPrompt";
+import PdfViewerPasswordPrompt from "./PdfViewerPasswordPrompt";
 
 import styles from "./DocboxPdfViewer.module.css";
 import "@jacobtread/pdfreader/style.css";
@@ -13,7 +13,7 @@ type Props = {
   onClose: VoidFunction;
 } & Omit<React.ComponentProps<typeof Root>, "fileURL">;
 
-export default function DocboxPdfViewerProvider({
+export default function PdfViewerProvider({
   src,
   documentInitParams,
   onClose,
@@ -69,7 +69,7 @@ function HandleError({
   // Missing password
   if (error.message === "No password given") {
     return (
-      <DocboxPdfViewerPasswordPrompt
+      <PdfViewerPasswordPrompt
         onClose={onClose}
         onSubmit={(password) => {
           setPassword(password);
@@ -81,7 +81,7 @@ function HandleError({
   // Failed password
   if (error.message === "Incorrect Password") {
     return (
-      <DocboxPdfViewerPasswordPrompt
+      <PdfViewerPasswordPrompt
         incorrect
         onClose={onClose}
         onSubmit={(password) => {
