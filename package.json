@@ -69,6 +69,8 @@
   },
   "dependencies": {
     "@jacobtread/pdfreader": "0.1.0",
+    "date-fns": "^4.1.0",
+    "isomorphic-dompurify": "^2.26.0",
     "pdfjs-dist": "^5.3.31"
   }
 }
