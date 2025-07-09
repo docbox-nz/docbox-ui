@@ -11,7 +11,7 @@ import {
   Thumbnail,
 } from "@jacobtread/pdfreader";
 
-import styles from "./DocboxPdfViewer.module.css";
+import styles from "./PdfViewer.module.css";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 

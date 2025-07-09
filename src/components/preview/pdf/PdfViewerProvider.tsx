@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Root } from "@jacobtread/pdfreader";
 import PdfViewerPasswordPrompt from "./PdfViewerPasswordPrompt";
 
-import styles from "./DocboxPdfViewer.module.css";
+import styles from "./PdfViewer.module.css";
 import "@jacobtread/pdfreader/style.css";
 
 type Props = {
